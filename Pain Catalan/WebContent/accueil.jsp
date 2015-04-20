@@ -20,6 +20,6 @@ Se connecter :
 </form>
 <br />
 <br />
-Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
+Pas encore inscrit ? Accéder au <a href="Inscription">formulaire d'inscription</a>.
 </body>
 </html>
