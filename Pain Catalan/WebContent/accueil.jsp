@@ -4,9 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>LES PAINS CATALANS - COVOITURAGE</title>
 </head>
 <body>
-salut yolo
+<h1>Bienvenue sur le covoiturage du pain catalan</h1>
+<hr />
+Se connecter :
+<br />
+Utilisateur : <input type="text" />
+<br />
+Mot de passe : <input type="password" />
+<br />
+<input type="submit" value="OK" />
+<br />
+<br />
+Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
 </body>
 </html>
