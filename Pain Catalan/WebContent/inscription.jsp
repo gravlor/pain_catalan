@@ -10,13 +10,49 @@
 <h1>Inscription sur le covoiturage du pain catalan</h1>
 <hr />
 
-Nom
- prénom
- adresse
- type
- nombre de passager
+<form action="profile.jsp">
 
+<table>
+
+<tr>
+<td>Nom</td>
+<td><input type="text" name="nom" /></td>
+</tr>
+
+<tr>
+<td>Prénom</td>
+<td><input type="text" name="prenom" /></td>
+</tr>
+
+<tr>
+<td>Adresse</td>
+<td><input type="text" name="adresse" /></td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>
+	<input type="radio" name="type" value="P" />Passager
+	<input type="radio" name="type" value="C" />Conducteur
+	</td>
+</tr>
+
+<tr>
+<td>Nombre de passagers</td>
+<td>
+	<select name="nbr">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+	</select>
+</td>
+</tr>
+
+</table>
  
+ <input type="submit" />
+ </form>
 
 </body>
 </html>

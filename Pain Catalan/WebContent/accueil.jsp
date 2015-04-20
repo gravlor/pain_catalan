@@ -11,11 +11,13 @@
 <hr />
 Se connecter :
 <br />
-Utilisateur : <input type="text" />
-<br />
-Mot de passe : <input type="password" />
-<br />
-<input type="submit" value="OK" />
+<form action="profile.jsp">
+	Utilisateur : <input type="text" />
+	<br />
+	Mot de passe : <input type="password" />
+	<br />
+	<input type="submit" value="OK" />
+</form>
 <br />
 <br />
 Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
