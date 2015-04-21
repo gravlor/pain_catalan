@@ -31,6 +31,7 @@ public class Inscription extends HttpServlet {
 		RequestDispatcher dispat;
 		dispat = request.getRequestDispatcher("/inscription.jsp");
 		dispat.forward(request,  response);
+		//BOBY
 	}
 
 	/**
