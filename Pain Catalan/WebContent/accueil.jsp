@@ -7,7 +7,7 @@
 <title>LES PAINS CATALANS - COVOITURAGE</title>
 </head>
 <body>
-<h1>Bienvenue sur le covoiturage du pain catalan</h1>
+<h1><img src="https://plus.google.com/u/0/_/focus/photos/public/AIbEiAIAAABECJOoi8mxzqzj_QEiC3ZjYXJkX3Bob3RvKihiMTZkOGU3NzZhM2M5MDkyOGIxZmIwOWMyNTVmMDFmMWZkMWYxNDdjMAFOdUOpWuUty_mlhrQh08DkExlV7w?sz=64"/>Bienvenue sur le covoiturage du pain catalan<img src="https://plus.google.com/u/0/_/focus/photos/public/AIbEiAIAAABECJOoi8mxzqzj_QEiC3ZjYXJkX3Bob3RvKihiMTZkOGU3NzZhM2M5MDkyOGIxZmIwOWMyNTVmMDFmMWZkMWYxNDdjMAFOdUOpWuUty_mlhrQh08DkExlV7w?sz=64"/></h1>
 <hr />
 Se connecter :
 <br />
