@@ -16,33 +16,33 @@
 
 <tr>
 <td>Nom</td>
-<td>VAR NOM</td>
+<td>${nom}</td>
 </tr>
 
 <tr>
 <td>Prénom</td>
-<td>VAR PRENOM</td>
+<td>${prenom}</td>
 </tr>
 
 <tr>
 <td>Adresse</td>
-<td>VAR ADRESSE</td>
+<td>${adresse}</td>
 </tr>
 
 <tr>
 <td>Type</td>
-<td>VAR TYPE</td>
+<td>${type}</td>
 </tr>
 
 <tr>
 <td>Nombre de passagers</td>
-<td>VAR NBR</td>
+<td>${passager}</td>
 </tr>
 
 </table>
 
 
-<button onClick="location.href='results.jsp';">Chercher un trajet</button>
+<button onClick="location.href='results.jsp';">Chercher un passager</button>
 
 
 </body>
