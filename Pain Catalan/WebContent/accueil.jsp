@@ -9,7 +9,7 @@
 <jsp:include page="headers.jsp" />
 </head>
 <body>
-<<<<<<< HEAD
+
 <div class="conteneur">
 	<header>
 		<a href="accueil.jsp"><h1><span class="blabla-vert">Les</span> <span class="blabla-bleu">pains</span> <span class="blabla-rouge">catalans</span></h1></a>
@@ -34,24 +34,6 @@
 			Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
 	</footer>
 </div>
-=======
-<h1><img src="https://plus.google.com/u/0/_/focus/photos/public/AIbEiAIAAABECJOoi8mxzqzj_QEiC3ZjYXJkX3Bob3RvKihiMTZkOGU3NzZhM2M5MDkyOGIxZmIwOWMyNTVmMDFmMWZkMWYxNDdjMAFOdUOpWuUty_mlhrQh08DkExlV7w?sz=64"/>Bienvenue sur le covoiturage du pain catalan<img src="https://plus.google.com/u/0/_/focus/photos/public/AIbEiAIAAABECJOoi8mxzqzj_QEiC3ZjYXJkX3Bob3RvKihiMTZkOGU3NzZhM2M5MDkyOGIxZmIwOWMyNTVmMDFmMWZkMWYxNDdjMAFOdUOpWuUty_mlhrQh08DkExlV7w?sz=64"/></h1>
-<hr />
-Se connecter :
-<br />
-<form action="profile.jsp">
-	Utilisateur : <input type="text" />
-	<br />
-	Mot de passe : <input type="password" />
-	<br />
-	<input type="submit" value="OK" />
-</form>
-<br />
-<br />
-<!-- test -->
-Pas encore inscrit ? Accéder au <a href="Inscription">formulaire d'inscription</a>.
 
-
->>>>>>> branch 'pain' of https://github.com/gravlor/pain_catalan.git
 </body>
 </html>
