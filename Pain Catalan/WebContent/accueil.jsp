@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>LES PAINS CATALANS - COVOITURAGE</title>
+<jsp:include page="headers.jsp" />
 </head>
 <body>
 <h1>Bienvenue sur le covoiturage du pain catalan</h1>
@@ -22,5 +23,7 @@ Se connecter :
 <br />
 <!-- test -->
 Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
+
+
 </body>
 </html>

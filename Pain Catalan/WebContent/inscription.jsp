@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Inscription</title>
+<jsp:include page="headers.jsp" />
 </head>
 <body>
 <h1>Inscription sur le covoiturage du pain catalan</h1>

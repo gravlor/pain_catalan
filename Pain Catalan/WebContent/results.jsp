@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Resultats de recherche</title>
+<jsp:include page="headers.jsp" />
 </head>
 <body>
 <h1>Covoiturage du pain catalan</h1>
