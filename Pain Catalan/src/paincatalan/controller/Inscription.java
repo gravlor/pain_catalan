@@ -28,9 +28,13 @@ public class Inscription extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		RequestDispatcher dispat;
-		dispat = request.getRequestDispatcher("/inscription.jsp");
-		dispat.forward(request,  response);
+		dispat = request.getRequestDispatcher("/inscription.jsp");		
+		String message = "Transmission de variables : OK !";		
+	    request.setAttribute( "test", message );	   
+	    dispat.forward(request,  response);
+		
 	}
 
 	/**

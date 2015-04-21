@@ -11,6 +11,14 @@
 <h1>Inscription sur le covoiturage du pain catalan</h1>
 <hr />
 
+<p> ICI
+            <% 
+            String attribut = (String) request.getAttribute("test");
+            out.println( attribut );
+            %>
+        </p> 
+
+
 <form action="profile.jsp">
 
 <table>
