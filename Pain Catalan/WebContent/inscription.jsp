@@ -5,12 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Inscription</title>
+<jsp:include page="headers.jsp" />
 </head>
 <body>
 <h1>Inscription sur le covoiturage du pain catalan</h1>
 <hr />
 
-<form action="profile.jsp">
+<form action="Inscription" method="post">
+
+<h3>Merci de renseigner les renseignements suivants :</h3>
+
+<br />
 
 <table>
 
@@ -40,7 +45,7 @@
 <tr>
 <td>Nombre de passagers</td>
 <td>
-	<select name="nbr">
+	<select name="passager">
 		<option>1</option>
 		<option>2</option>
 		<option>3</option>
@@ -51,7 +56,8 @@
 
 </table>
  
- <input type="submit" />
+ <input type="submit" value="S'inscrire"/>
+ <input type="button" onClick="location.href='accueil.jsp';" value="Revenir à l'accueil" />
  </form>
 
 </body>

@@ -4,17 +4,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Affichage du trajet</title>
+<title>Inscription</title>
 <jsp:include page="headers.jsp" />
 </head>
 <body>
-<h1>Covoiturage du pain catalan</h1>
-<h3>Affichage du trajet</h3>
+<h1>Inscription réussie !</h1>
 <hr />
 
-Carte google
+Votre inscription s'est bien passée !
 
-<button>Réserver !</button>
+
+<h3>Nom : ${nom}</h3>
+<h3>Prénom :  ${prenom}</h3>
+<h3>Adresse : ${adresse}</h3>
+<h3>Type de passager/conducteur : ${type}</h3>
+<h3>Nombre de passager(s) : ${passager}</h3>
+
+<hr />
+Vous pouvez maintenant <a href="Profile">accéder à votre profil</a> !
+
 
 </body>
 </html>
