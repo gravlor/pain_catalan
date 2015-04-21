@@ -13,6 +13,7 @@
 <hr />
 
 Carte google
+<jsp:include page="affichageGoogle.jsp" />
 
 <button>Réserver !</button>
 
