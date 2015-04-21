@@ -1,0 +1,150 @@
+@CHARSET "ISO-8859-1";
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular.eot');
+    src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular.woff2') format('woff2'),
+         url('../fonts/roboto-regular.woff') format('woff'),
+         url('../fonts/roboto-regular.ttf') format('truetype'),
+         url('../fonts/roboto-regular.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	padding:0px;
+	margin:0px;
+	font-family:robotoregular;
+    color: #222;
+    font-size: 14px;
+	background: none repeat scroll 0 0 #f4f4f4;
+}
+header{
+    background: none repeat scroll 0 0 white;
+}
+section{
+    background: none repeat scroll 0 0 #f4f4f4;
+    color: #222;
+    font-size: 14px;
+}
+footer{
+	padding:20px;
+}
+.conteneur{
+	width:320px;
+	margin:0 auto;
+}
+.blabla-vert{
+	color:#6CB42F;
+}
+.blabla-bleu{
+	color:#0083BA;
+}
+.blabla-rouge{
+	color:#C83434;
+}
+h1{
+    display: inline-block;
+    font-family: robotoregular;
+    font-size: 18px;
+    height: 43px;
+    line-height: 40px;
+    margin: 0 0 0 5px;
+    width: 160px;
+}
+h2{
+	font-family:robotoregular;
+	color: #0ca9fa;
+	text-align:center;
+}
+a{
+    color: #0ca9fa;
+}
+nav{
+	float: right;
+}
+nav ul{
+	list-style-type: none;
+    height: 43px;
+    margin: 0;
+    padding: 0; 
+}
+nav ul li{
+	float:right;
+}
+nav ul li a{
+    display: block;
+    width: 43px;
+}
+.menu-carte{
+	background:url("../images/picto-carte.png");
+	width:43px;
+	height:43px;
+	opacity:0.8;
+}
+.menu-inscription{
+	background:url("../images/picto-inscription.png");
+	width:43px;
+	height:43px;
+	opacity:0.8;
+}
+.menu-profil{
+	background:url("../images/picto-profil.png");
+	width:43px;
+	height:43px;
+	opacity:0.8;	
+}
+.menu-carte:hover{
+	opacity:1;
+}
+.menu-inscription:hover{
+	opacity:1;
+}
+.menu-profil:hover{
+	opacity:1;
+}
+form{
+	width:280px;
+	margin:0 auto;
+}
+label{
+	
+}
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select, textarea {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #222;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    height: 50px;
+    line-height: normal;
+    margin: 0 auto;
+    padding-left: 15px;
+    width: 260px;
+    margin: 5px 0;
+}
+ button, a.button, input[type="submit"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #0ca9fa;
+    border-color: -moz-use-text-color -moz-use-text-color #048acf;
+    border-image: none;
+    border-radius: 3px;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    width:100%;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+}
+ button, a.button, input[type="submit"]:hover{
+	cursor:pointer;
+}
