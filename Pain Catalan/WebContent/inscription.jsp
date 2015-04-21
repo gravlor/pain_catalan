@@ -11,15 +11,11 @@
 <h1>Inscription sur le covoiturage du pain catalan</h1>
 <hr />
 
-<p> ICI
-            <% 
-            String attribut = (String) request.getAttribute("test");
-            out.println( attribut );
-            %>
-        </p> 
+<form action="Inscription" method="post">
 
+<h3>Merci de renseigner les renseignements suivants :</h3>
 
-<form action="profile.jsp">
+<br />
 
 <table>
 
@@ -49,7 +45,7 @@
 <tr>
 <td>Nombre de passagers</td>
 <td>
-	<select name="nbr">
+	<select name="passager">
 		<option>1</option>
 		<option>2</option>
 		<option>3</option>
@@ -60,7 +56,8 @@
 
 </table>
  
- <input type="submit" />
+ <input type="submit" value="S'inscrire"/>
+ <input type="button" onClick="location.href='accueil.jsp';" value="Revenir à l'accueil" />
  </form>
 
 </body>
