@@ -3,35 +3,36 @@ var panel;
 var initialize;
 var calculate;
 var direction;
-var utilisateur = {};
+var marker = new Array();
+var utilisateurs = {};
 
-utilisateur['Boris'] = {
+utilisateurs['Boris'] = {
 		center: new google.maps.LatLng(43.641020, 1.371558),
 		name: 'Boris'
 };
 
-utilisateur['Laurent'] = {
+utilisateurs['Laurent'] = {
 		center: new google.maps.LatLng(43.607788, 1.448592),
 		name: 'Laurent'
 };
 
-utilisateur['Anthony'] = {
+utilisateurs['Anthony'] = {
 		center: new google.maps.LatLng(42.106831, -72.588154),
 		name: 'Anthony'
 };
 
-utilisateur['Julien'] = {
+utilisateurs['Julien'] = {
 		center: new google.maps.LatLng(43.586508, 1.429555),
 		name: 'Julien'
 };
 
-utilisateur['Cyrille'] = {
+utilisateurs['Cyrille'] = {
 		center: new google.maps.LatLng(),
 		name: 'Cyrille'
 };
 
 
-var stepPoints = [];
+
 var utilisateurCircle;
 
 initialize = function(){
@@ -107,23 +108,17 @@ calculate = function(){
         directionsService.route(request, function(response, status){ // Envoie de la requête pour calculer le parcours
             if(status == google.maps.DirectionsStatus.OK){
                 direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
-                for (var route in response.routes){
-                    for (var leg in route.legs){
-                        for (var step in leg.steps){
-                            for (var latlng in step.path){
-                                stepPoints.push(latlng);
-                            }
-                        }
-                    }
-                }
-                for(var user in utilisateur){
-                	
-                	var marker(user) = new google.maps.Marker({
-                		position: user.center,
+                var stepPoints = [];
+                stepPoints = response.routes[0].overview_path;
+                
+                console.log(stepPoints);
+                for(var key in utilisateurs){
+                	marker[key] = new google.maps.Marker({
+                		position: utilisateurs[key].center,
                 		map: map,
-                		title: user.name
+                		title: utilisateurs[key].name
                 	});
-                	
+                	console.log(marker);
                 	var userOption = {
                 			strokeColor: '#FF0000',
                 		    strokeOpacity: 0.8,
@@ -131,12 +126,15 @@ calculate = function(){
                 		    fillColor: '#FF0000',
                 		    fillOpacity: 0.35,
                 		    map: map,
-                		    center: utilisateur[user].center,
+                		    center: utilisateurs[key].center,
                 		    radius: 1000
                 	};
+                	console.log(stepPoints.lenght);
                 	for( i = 0 ; i < stepPoints.length ; i++){
+                		console.log("ok");
+                		utilisateurCircle = new google.maps.Circle(userOption);
                     	if(google.maps.geometry.poly.containsLocation(stepPoints.latlng, utilisateurCircle)){
-                    		utilisateurCircle = new google.maps.Circle(userOption);
+                    		utilisateurCircle.fillColor= '#00FF11';
                     	};
                     }
                 }
