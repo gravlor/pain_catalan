@@ -12,6 +12,7 @@ import javax.persistence.criteria.CriteriaQuery;
 public abstract class GenericDAO<T> {
 	
 	private Class<T> entityClass;
+	
     private Class<T> getEntityClass(){
     	return entityClass;
     }

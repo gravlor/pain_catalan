@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import paincatalan.dao.UserDAO;
+import paincatalan.model.User;
+
 /**
  * Servlet implementation class Inscription
  */
@@ -18,13 +21,6 @@ public class Inscription extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-	
-	 String nom = "";
-     String prenom = "";
-     String adresse = "";
-     String type = "";
-     String passager = "";
-	
 	
 	
     public Inscription() {
@@ -56,19 +52,29 @@ public class Inscription extends HttpServlet {
 		// TODO Auto-generated method stub
 		RequestDispatcher dispat;
 		
-		this.nom = request.getParameter("nom" );
-		this.prenom = request.getParameter("prenom");
-		this.adresse = request.getParameter("adresse");
-		this.type = request.getParameter("type");
-		this.passager = request.getParameter("passager");
+		String nom = request.getParameter("nom" );
+		String prenom = request.getParameter("prenom");
+		String adresse = request.getParameter("adresse");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		String type = request.getParameter("type");
+		String passager = request.getParameter("passager");
 		
+		UserDAO dao = new UserDAO();
+		User user = new User();
+		user.setAdress(adresse);
+		user.setEmail(email);
+		user.setFirstName(prenom);
+		user.setName(nom);
+		user.setPassword(password);
 		
+		dao.create(user);
 		
-		request.setAttribute("nom", this.nom);
-		request.setAttribute("prenom", this.prenom);
-		request.setAttribute("adresse", this.adresse);
-		request.setAttribute("type", this.type);
-		request.setAttribute("passager", this.passager);
+		request.setAttribute("nom", nom);
+		request.setAttribute("prenom", prenom);
+		request.setAttribute("adresse", adresse);
+		request.setAttribute("type", type);
+		request.setAttribute("passager", passager);
 		
 		
 		

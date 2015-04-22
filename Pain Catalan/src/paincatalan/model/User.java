@@ -2,7 +2,6 @@ package paincatalan.model;
 
 import java.io.Serializable;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
@@ -40,6 +39,10 @@ public class User implements Serializable {
 	
 	private int		radius;
 
+	public User() {
+		
+	}
+	
 	public int getId() {
 		return id;
 	}

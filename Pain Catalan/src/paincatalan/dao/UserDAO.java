@@ -34,20 +34,5 @@ public class UserDAO extends GenericDAO<User> {
 		return (User) getEntityManager().createNamedQuery("Article.getUserByEmail").
 				setParameter("id", id).getSingleResult();
 	}
-
-	@SuppressWarnings("unchecked")
-	public User createUser(User user){
-		//return (User) getEntityManager().createNamedQuery("Article.createUser").
-			//	setParameter("email", email).
-			//	setParameter("email", email).
-			//	setParameter("email", email).
-			//	setParameter("email", email).
-			//	setParameter("email", email).
-			//	setParameter("email", email).
-			//	getSingleResult();
-	
-		getEntityManager().persist(user);
-		return user;
-	}
 	
 }
