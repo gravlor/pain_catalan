@@ -6,8 +6,8 @@ FirstName VARCHAR(100) NOT NULL,
 Email VARCHAR(150) NOT NULL,
 Password VARCHAR(50) NOT NULL,
 Adress TEXT,
-Type	TINYINT,
-Places	VARCHAR(2),
+Type	VARCHAR(1),
+Places	VARCHAR(1),
 Radius	SMALLINT,
 PRIMARY KEY (Id)
 );

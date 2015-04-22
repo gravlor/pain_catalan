@@ -33,8 +33,9 @@ public abstract class GenericDAO<T> {
 	}
 
 	public void create(T entity) {
-       getEntityManager().persist(entity);
-		
+		getEntityManager().getTransaction().begin();
+		getEntityManager().persist(entity);
+		getEntityManager().getTransaction().commit();
     }
 
     public void edit(T entity) {

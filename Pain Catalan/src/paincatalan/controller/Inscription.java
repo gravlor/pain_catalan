@@ -59,14 +59,24 @@ public class Inscription extends HttpServlet {
 		String type = request.getParameter("type");
 		String passager = request.getParameter("passager");
 		
+		System.out.println("nom =" + nom);
+		System.out.println("prenom =" + prenom);
+		System.out.println("adresse =" + adresse);
+		System.out.println("email =" + email);
+		System.out.println("password =" + password);
+		System.out.println("type =" + type);
+		System.out.println("passager =" + passager);
+		
 		UserDAO dao = new UserDAO();
 		User user = new User();
-		user.setAdress(adresse);
-		user.setEmail(email);
 		user.setFirstName(prenom);
 		user.setName(nom);
+		user.setEmail(email);
 		user.setPassword(password);
-		
+		user.setAdress(adresse);
+		user.setType(type);
+		user.setPlaces(Integer.valueOf(passager));
+		user.setRadius(10);
 		dao.create(user);
 		
 		request.setAttribute("nom", nom);
@@ -77,7 +87,7 @@ public class Inscription extends HttpServlet {
 		
 		
 		
-		dispat = request.getRequestDispatcher("/inscription-ok.jsp");
+		dispat = request.getRequestDispatcher("/carte.jsp");
 		dispat.forward(request,  response);
 		
 	}
