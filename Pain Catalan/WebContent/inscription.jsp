@@ -46,7 +46,7 @@
  	</section>
 	<section>
 		(Si utilisateur viens de s'inscrire: on affiche)
-		<h2>Inscription réussie !</h2>
+		<h2>Vous êtes inscrit !</h2>
 		<p>Nom : ${nom}</p>
 		<p>Prénom :  ${prenom}</p>
 		<p>Adresse : ${adresse}</p>

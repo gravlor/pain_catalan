@@ -31,6 +31,7 @@
 			<input type="password" name="password" placeholder="Mon mot de passe" />
 			<input type="submit" value="Se connecter" />
 		</form>
+		(si non connecté: afficher)
 		<div class="lien-inscription">
 			Pas encore membre ?<br /><a href="inscription.jsp">Inscrivez-vous gratuitement </a>
 		</div>
