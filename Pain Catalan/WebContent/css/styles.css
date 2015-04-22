@@ -67,6 +67,7 @@ h1{
     line-height: 40px;
     margin: 0 0 0 5px;
     width: 160px;
+    float:left;
 }
 h2{
 	font-family:robotoregular;
@@ -77,7 +78,7 @@ a{
     color: #0ca9fa;
 }
 nav{
-	float: right;
+	
 }
 nav ul{
 	list-style-type: none;

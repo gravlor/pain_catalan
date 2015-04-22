@@ -8,7 +8,7 @@
 <jsp:include page="headers.jsp" />
 </head>
 <body>
-<h1>Inscription sur le covoiturage du pain catalan</h1>
+<h1>Inscription covoiturage | Les pains catalans</h1>
 <hr />
 
 <form action="Inscription" method="post">
