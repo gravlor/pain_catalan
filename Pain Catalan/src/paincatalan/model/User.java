@@ -33,7 +33,7 @@ public class User implements Serializable {
 	
 	private String	adress;
 	
-	private int		type;
+	private String	type;
 	
 	private int		places;
 	
@@ -91,11 +91,11 @@ public class User implements Serializable {
 		this.adress = adress;
 	}
 
-	public int getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

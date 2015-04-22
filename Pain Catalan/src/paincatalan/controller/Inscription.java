@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import paincatalan.dao.UserDAO;
 import paincatalan.model.User;
@@ -58,26 +59,33 @@ public class Inscription extends HttpServlet {
 		String password = request.getParameter("password");
 		String type = request.getParameter("type");
 		String passager = request.getParameter("passager");
+		String radius = request.getParameter("rayon");
+		
+		System.out.println("nom =" + nom);
+		System.out.println("prenom =" + prenom);
+		System.out.println("adresse =" + adresse);
+		System.out.println("email =" + email);
+		System.out.println("password =" + password);
+		System.out.println("type =" + type);
+		System.out.println("passager =" + passager);
+		System.out.println("radius =" + radius);
 		
 		UserDAO dao = new UserDAO();
 		User user = new User();
-		user.setAdress(adresse);
-		user.setEmail(email);
 		user.setFirstName(prenom);
 		user.setName(nom);
+		user.setEmail(email);
 		user.setPassword(password);
-		
+		user.setAdress(adresse);
+		user.setType(type);
+		user.setPlaces(Integer.valueOf(passager));
+		user.setRadius(Integer.valueOf(radius));
 		dao.create(user);
 		
-		request.setAttribute("nom", nom);
-		request.setAttribute("prenom", prenom);
-		request.setAttribute("adresse", adresse);
-		request.setAttribute("type", type);
-		request.setAttribute("passager", passager);
+		HttpSession session = request.getSession();
+		session.setAttribute("user", user);
 		
-		
-		
-		dispat = request.getRequestDispatcher("/inscription-ok.jsp");
+		dispat = request.getRequestDispatcher("/profile.jsp");
 		dispat.forward(request,  response);
 		
 	}
