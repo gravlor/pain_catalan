@@ -3,9 +3,39 @@ var panel;
 var initialize;
 var calculate;
 var direction;
+var utilisateur = {};
+
+utilisateur['Boris'] = {
+		center: new google.maps.LatLng(43.641020, 1.371558),
+		name: 'Boris'
+};
+
+utilisateur['Laurent'] = {
+		center: new google.maps.LatLng(43.607788, 1.448592),
+		name: 'Laurent'
+};
+
+utilisateur['Anthony'] = {
+		center: new google.maps.LatLng(42.106831, -72.588154),
+		name: 'Anthony'
+};
+
+utilisateur['Julien'] = {
+		center: new google.maps.LatLng(43.586508, 1.429555),
+		name: 'Julien'
+};
+
+utilisateur['Cyrille'] = {
+		center: new google.maps.LatLng(),
+		name: 'Cyrille'
+};
+
+
+var stepPoints = [];
+var utilisateurCircle;
 
 initialize = function(){
-  var latLng = new google.maps.LatLng(43.603808, 1.441081); // Correspond au coordonnées de Lille
+  var latLng = new google.maps.LatLng(43.644185, 1.386453); // Correspond au coordonnées de Lille
   var myOptions = {
     zoom      : 14, // Zoom par défaut
     center    : latLng, // Coordonnées de départ de la carte de type latLng 
@@ -66,7 +96,7 @@ initialize = function(){
 
 calculate = function(){
     origin      = document.getElementById('origin').value; // Le point départ
-    destination = document.getElementById('destination').value; // Le point d'arrivé
+    destination = document.getElementById('destination').value; // Le point d'arrivé*/
     if(origin && destination){
         var request = {
             origin      : origin,
@@ -77,9 +107,46 @@ calculate = function(){
         directionsService.route(request, function(response, status){ // Envoie de la requête pour calculer le parcours
             if(status == google.maps.DirectionsStatus.OK){
                 direction.setDirections(response); // Trace l'itinéraire sur la carte et les différentes étapes du parcours
+                for (var route in response.routes){
+                    for (var leg in route.legs){
+                        for (var step in leg.steps){
+                            for (var latlng in step.path){
+                                stepPoints.push(latlng);
+                            }
+                        }
+                    }
+                }
+                for(var user in utilisateur){
+                	
+                	var marker(user) = new google.maps.Marker({
+                		position: user.center,
+                		map: map,
+                		title: user.name
+                	});
+                	
+                	var userOption = {
+                			strokeColor: '#FF0000',
+                		    strokeOpacity: 0.8,
+                		    strokeWeight: 2,
+                		    fillColor: '#FF0000',
+                		    fillOpacity: 0.35,
+                		    map: map,
+                		    center: utilisateur[user].center,
+                		    radius: 1000
+                	};
+                	for( i = 0 ; i < stepPoints.length ; i++){
+                    	if(google.maps.geometry.poly.containsLocation(stepPoints.latlng, utilisateurCircle)){
+                    		utilisateurCircle = new google.maps.Circle(userOption);
+                    	};
+                    }
+                }
             }
         });
     }
 };
+
+verifier = function(){
+	
+}
 
 initialize();
