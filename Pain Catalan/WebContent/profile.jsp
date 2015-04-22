@@ -8,7 +8,7 @@
 	<link rel='stylesheet' href='css/styles.css' type='text/css'/>
 	<title>Votre profil | Les pains catalans</title>
 	<jsp:include page="headers.jsp" />
-	<%@ page session="true" %>
+	<%@ page import="paincatalan.model.User" %>
 </head>
 <body>
 	<header>
@@ -26,11 +26,12 @@
 		</div>
 	</header>
 	<section>
-		<p>Nom : ${sessionScope.user.name}</p>
-		<p>Prénom :  ${sessionScope.user.prenom}</p>
-		<p>Adresse : ${sessionScope.user.adresse}</p>
-		<p>Type de passager/conducteur : ${sessionScope.user.type}</p>
-		<p>Nombre de passager(s) : ${sessionScope.user.passager}</p>
+	
+		<p>Nom : <%= ((User) request.getSession().getAttribute("user")).getName() %></p>
+		<p>Prénom :  <%= ((User) request.getSession().getAttribute("user")).getFirstName() %></p>
+		<p>Adresse : <%= ((User) request.getSession().getAttribute("user")).getAdress() %></p>
+		<p>Type de passager/conducteur : <%= ((User) request.getSession().getAttribute("user")).getType() %></p>
+		<p>Nombre de passager(s) : <%= ((User) request.getSession().getAttribute("user")).getPlaces() %></p>
 		
 	</section>
 </body>
