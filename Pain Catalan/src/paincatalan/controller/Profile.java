@@ -20,12 +20,6 @@ public class Profile extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
 	
-	String nom = "Nom base";
-    String prenom = "Prénom base";
-    String adresse = "Adresse base";
-    String type = "Type base";
-    String passager = "passager base";
-	
     public Profile() {
         super();
         // TODO Auto-generated constructor stub
@@ -39,12 +33,6 @@ public class Profile extends HttpServlet {
 		
 		RequestDispatcher dispat;
 		dispat = request.getRequestDispatcher("/profile.jsp");		
-				
-	    request.setAttribute( "nom", this.nom );
-	    request.setAttribute( "prenom", this.prenom );
-	    request.setAttribute( "adresse", this.adresse );
-	    request.setAttribute( "type", this.type );
-	    request.setAttribute( "passager", this.passager );
 	    
 	    dispat.forward(request,  response);
 		

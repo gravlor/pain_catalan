@@ -8,6 +8,7 @@
 	<jsp:include page="headers.jsp" />
 	<link rel='stylesheet' href='css/styles.css' type='text/css'/>
 	<link rel="stylesheet" href="css/jquery-ui-1.8.12.custom.css" type="text/css" />
+	<%@ page import="paincatalan.model.User" %>
 	<title>Recherchez un covoiturage | Les pains catalans</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
 	            <form action="" method="get" name="direction" id="direction">
 	                <label style="display:none;">Départ:</label>
 					<div class="from">
-	              	 	<input type="text" name="origin" id="origin" placeholder="De">
+	              	 	<input type="text" value="<%= ((User) request.getSession().getAttribute("user")).getAdress() %>" name="origin" id="origin" placeholder="De">
 	                </div>
 	                <label style="display:none;">Arrivée :</label>
 	                <div class="to">
