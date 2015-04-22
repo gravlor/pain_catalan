@@ -87,7 +87,7 @@ nav ul{
     padding: 0; 
 }
 nav ul li{
-	float:right;
+	float:left;
 }
 nav ul li a{
     display: block;
@@ -140,7 +140,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     width: 260px;
     margin: 15px 0;
 }
- button, a.button, input[type="submit"] {
+ input[type="button"], a.button, input[type="submit"] {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -160,7 +160,43 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     text-align: center;
     text-decoration: none;
 }
- button, a.button, input[type="submit"]:hover{
+input[type="button"]:hover, a.button:hover, input[type="submit"]:hover{
  	background-color:#0A88CC;
 	cursor:pointer;
 }
+/* page carte */
+ #container #map{width:700px;height:500px;margin:auto;}
+ #container #panel{width:700px;margin:auto;}
+ #container #destinationForm{margin:0px 0px 20px 0px;padding:10px 20px;}
+ #container #destinationForm input[type=text]{border:solid 1px #C0C0C0;}
+ .to::before{
+    border-color: #c93634 !important;
+}
+.from::before, .to::before{
+    top: 14px;
+}
+.from::before, .to::before {
+    background: none repeat scroll 0 0 #fff;
+    border: 6px solid #68be57;
+    border-radius: 12px;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    left: 10px;
+    padding: 4px;
+    position: absolute;
+    top: 17px;
+    vertical-align: middle;
+    width: 2px;
+    z-index: 1;
+}
+.from, .to{
+    position: relative;
+}
+.from input[type="text"], .to input[type="text"]{
+	padding-left:38px;
+	width:240px;
+}
+ @media (max-width:720px){
+ 	#container #map,#container #panel{width:95%;}
+ }

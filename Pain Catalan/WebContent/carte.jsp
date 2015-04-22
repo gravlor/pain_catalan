@@ -4,17 +4,12 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Carte | Les pains catalans</title>
+	<link rel="icon" type="image/x-icon" href="https://d1ovtcjitiy70m.cloudfront.net/vi-1/favicon.ico">
 	<jsp:include page="headers.jsp" />
 	<link rel='stylesheet' href='css/styles.css' type='text/css'/>
 	<link rel="stylesheet" href="css/jquery-ui-1.8.12.custom.css" type="text/css" />
+	<title>Carte | Les pains catalans</title>
 </head>
-	<style type="text/css">
-	  #container #map{width:700px;height:500px;margin:auto;}
-	  #container #panel{width:700px;margin:auto;}
-	  #container #destinationForm{margin:0px 0px 20px 0px;background:#EEEEEE;padding:10px 20px;border:solid 1px #C0C0C0;}
-	  #container #destinationForm input[type=text]{border:solid 1px #C0C0C0;}
-	</style>
 <body>
 	<header>
 		<div class="conteneur">
@@ -31,11 +26,15 @@
 	    <div id="container">
 	        <div id="destinationForm">
 	            <form action="" method="get" name="direction" id="direction">
-	                <label>Départ:</label>
-	                <input type="text" name="origin" id="origin">
-	                <label>Arrivée :</label>
-	                <input type="text" name="destination" id="destination">
-	                <input type="button" value="Calculer l'itinéraire" onclick="javascript:calculate()">
+	                <label style="display:none;">Départ:</label>
+					<div class="from">
+	              	 	<input type="text" name="origin" id="origin" placeholder="De">
+	                </div>
+	                <label style="display:none;">Arrivée :</label>
+	                <div class="to">
+	               		<input type="text" name="destination" id="destination" placeholder="À">
+	               	</div>
+	                <input type="button" value="Rechercher" onclick="javascript:calculate()">
 	            </form>
 	        </div>
 	        <div id="map">
@@ -49,8 +48,5 @@
 	    <script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
 	    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=fr"></script>
 	    <script type="text/javascript" src="js/functions.js"></script>
-
-<button>Réserver !</button>
-
 </body>
 </html>
