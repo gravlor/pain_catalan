@@ -31,6 +31,7 @@
 			<input type="text" name="nom" placeholder="Nom"/>
 			<input type="text" name="prenom" placeholder="Prénom"/>
 			<input type="text" name="email" placeholder="Email"/>
+			<input type="password" name="password" placeholder="Mot de passe" />
 			<input type="text" name="adresse" placeholder="Adresse"/>
 			<input type="radio" name="type" value="P" />Passager
 			<input type="radio" name="type" value="C" />Conducteur

@@ -42,7 +42,7 @@
 	        <div id="map">
 	            <p>Veuillez patienter pendant le chargement de la carte...</p>
 	        </div>
-	        <div id="panel"></div>
+	        <div style="display:none;" id="panel"></div>
 	    </div>
 	    
 	    <!-- Include Javascript -->
