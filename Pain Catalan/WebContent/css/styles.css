@@ -21,6 +21,52 @@ body{
 header{
     background: none repeat scroll 0 0 white;
 }
+.conteneur-menu{
+	float:right;
+}
+nav{
+	
+}
+nav ul{
+	list-style-type: none;
+    height: 43px;
+    margin: 0;
+    padding: 0; 
+}
+nav ul li{
+	float:left;
+}
+nav ul li a{
+    display: block;
+    width: 43px;
+}
+.menu-carte{
+	background:url("../images/picto-carte.png");
+	width:43px;
+	height:43px;
+	opacity:0.6;
+}
+.menu-inscription{
+	background:url("../images/picto-inscription.png");
+	width:43px;
+	height:43px;
+	opacity:0.6;
+}
+.menu-profil{
+	background:url("../images/picto-profil.png");
+	width:43px;
+	height:43px;
+	opacity:0.6;	
+}
+.menu-carte:hover{
+	opacity:1;
+}
+.menu-inscription:hover{
+	opacity:1;
+}
+.menu-profil:hover{
+	opacity:1;
+}
 section{
     background: none repeat scroll 0 0 #f4f4f4;
     color: #222;
@@ -76,49 +122,6 @@ h2{
 }
 a{
     color: #0ca9fa;
-}
-nav{
-	
-}
-nav ul{
-	list-style-type: none;
-    height: 43px;
-    margin: 0;
-    padding: 0; 
-}
-nav ul li{
-	float:left;
-}
-nav ul li a{
-    display: block;
-    width: 43px;
-}
-.menu-carte{
-	background:url("../images/picto-carte.png");
-	width:43px;
-	height:43px;
-	opacity:0.6;
-}
-.menu-inscription{
-	background:url("../images/picto-inscription.png");
-	width:43px;
-	height:43px;
-	opacity:0.6;
-}
-.menu-profil{
-	background:url("../images/picto-profil.png");
-	width:43px;
-	height:43px;
-	opacity:0.6;	
-}
-.menu-carte:hover{
-	opacity:1;
-}
-.menu-inscription:hover{
-	opacity:1;
-}
-.menu-profil:hover{
-	opacity:1;
 }
 form{
 	width:280px;

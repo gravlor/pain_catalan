@@ -15,60 +15,44 @@
 			<nav>
 				<ul>
 					<a href="accueil.jsp"><h1><span class="blabla-vert">Les</span> <span class="blabla-bleu">pains</span> <span class="blabla-rouge">catalans</span></h1></a>
-					<a href="carte.jsp"><li class="menu-carte"></li></a>
-					<a href="inscription.jsp"><li class="menu-inscription"></li></a>
-					<a href="profile.jsp"><li class="menu-profil"></li></a>
+					<div class="conteneur-menu">
+						<a href="carte.jsp"><li class="menu-carte"></li></a>
+						<a href="inscription.jsp"><li class="menu-inscription"></li></a>
+						<a href="profile.jsp"><li class="menu-profil"></li></a>
+					</div>
 				</ul>
 			</nav>
 		</div>
 	</header>
-<!--  Si utilisateur non inscrit: on affiche -->
-<h2>Inscription</h2>
-<form action="Inscription" method="post">
-	<p>Merci de renseigner les renseignements suivants :</p>
-	<table>
-		<tr>
-			<td>Nom</td>
-			<td><input type="text" name="nom" /></td>
-		</tr>
-		<tr>
-			<td>Prénom</td>
-			<td><input type="text" name="prenom" /></td>
-		</tr>
-		<tr>
-			<td>Adresse</td>
-			<td><input type="text" name="adresse" /></td>
-		</tr>
-		<tr>
-			<td>Type</td>
-		<td>
+	<section>
+		(Si utilisateur non inscrit: on affiche )
+		<h2>Inscription</h2>
+		<form action="Inscription" method="post">
+			<p>Merci de renseigner les renseignements suivants :</p>
+			<input type="text" name="nom" placeholder="Nom"/>
+			<input type="text" name="prenom" placeholder="Prénom"/>
+			<input type="text" name="adresse" placeholder="Adresse"/>
 			<input type="radio" name="type" value="P" />Passager
 			<input type="radio" name="type" value="C" />Conducteur
-			</td>
-		</tr>
-		<tr>
-			<td>Nombre de passagers</td>
-			<td>
-				<select name="passager">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</td>
-		</tr>
-	</table>
-	 <input type="submit" value="S'inscrire"/>
-	 <input type="button" onClick="location.href='accueil.jsp';" value="Revenir à l'accueil" />
- </form>
-<!-- si utilisateur viens de s'inscrire: on affiche -->
-<h1>Inscription réussie !</h1>
-<h2>Votre inscription s'est bien passée !</h2>
-<p>Nom : ${nom}</p>
-<p>Prénom :  ${prenom}</p>
-<p>Adresse : ${adresse}</p>
-<p>Type de passager/conducteur : ${type}</p>
-<p>Nombre de passager(s) : ${passager}</p>
-Vous pouvez maintenant <a href="Profile">accéder à votre profil</a> !
+			<select name="passager">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+			 <input type="submit" value="S'inscrire"/>
+			 <input type="button" onClick="location.href='accueil.jsp';" value="Revenir à l'accueil" />
+		 </form>
+ 	</section>
+	<section>
+		(Si utilisateur viens de s'inscrire: on affiche)
+		<h1>Inscription réussie !</h1>
+		<p>Nom : ${nom}</p>
+		<p>Prénom :  ${prenom}</p>
+		<p>Adresse : ${adresse}</p>
+		<p>Type de passager/conducteur : ${type}</p>
+		<p>Nombre de passager(s) : ${passager}</p>
+		Vous pouvez maintenant <a href="Profile">accéder à votre profil</a> !
+	</section>
 </body>
 </html>
