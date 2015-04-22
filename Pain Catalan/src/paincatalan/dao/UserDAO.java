@@ -3,6 +3,7 @@ package paincatalan.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
 import javax.persistence.PersistenceContext;
 
 import paincatalan.model.User;
@@ -17,15 +18,36 @@ public class UserDAO extends GenericDAO<User> {
 	private EntityManager em;
 	
 	@SuppressWarnings("unchecked")
-	public List<String> getAllCategories() {
-		return (List<String>) getEntityManager().createNamedQuery("Article.findAllCategories")
+	public List<User> getAllUsers() {
+		return (List<User>) getEntityManager().createNamedQuery("User.getAllUsers")
 				.getResultList();
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<User> getAllProductsPerCategory(String categorie){
-		return (List<User>) getEntityManager().createNamedQuery("Article.findAllArticleByCategories").
-				setParameter("category",categorie).getResultList();
+	public User getUserByEmail(String email){
+		return (User) getEntityManager().createNamedQuery("Article.getUserByEmail").
+				setParameter("email", email).getSingleResult();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public User getUserById(int id){
+		return (User) getEntityManager().createNamedQuery("Article.getUserByEmail").
+				setParameter("id", id).getSingleResult();
 	}
 
+	@SuppressWarnings("unchecked")
+	public User createUser(User user){
+		//return (User) getEntityManager().createNamedQuery("Article.createUser").
+			//	setParameter("email", email).
+			//	setParameter("email", email).
+			//	setParameter("email", email).
+			//	setParameter("email", email).
+			//	setParameter("email", email).
+			//	setParameter("email", email).
+			//	getSingleResult();
+	
+		getEntityManager().persist(user);
+		return user;
+	}
+	
 }
