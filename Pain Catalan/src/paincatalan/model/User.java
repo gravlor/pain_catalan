@@ -1,10 +1,26 @@
 package paincatalan.model;
 
+import java.io.Serializable;
+
+import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
-public class User {
+@NamedQueries(value = 
+{ 
+	@NamedQuery(name="User.getAllUsers", query="SELECT u FROM User u"),
+	@NamedQuery(name="User.getUserByEmail", query="SELECT u FROM User u "
+			+ "WHERE u.email = :email"),
+	@NamedQuery(name="User.getUserById", query="SELECT u FROM User u "
+					+ "WHERE u.id = :id"),
+})
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private int		id;
 	
