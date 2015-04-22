@@ -46,15 +46,5 @@
 			 <input type="button" onClick="location.href='accueil.jsp';" value="Revenir à l'accueil" />
 		 </form>
  	</section>
-	<section>
-		(Si utilisateur viens de s'inscrire: on affiche)
-		<h2>Vous êtes inscrit !</h2>
-		<p>Nom : ${nom}</p>
-		<p>Prénom :  ${prenom}</p>
-		<p>Adresse : ${adresse}</p>
-		<p>Type de passager/conducteur : ${type}</p>
-		<p>Nombre de passager(s) : ${passager}</p>
-		Vous pouvez maintenant <a href="Profile">accéder à votre profil</a> !
-	</section>
 </body>
 </html>
