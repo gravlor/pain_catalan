@@ -131,7 +131,7 @@ form{
 	width:280px;
 	margin:0 auto;
 }
-input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select, textarea {
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"],input[type="number"], select, textarea {
     background: none repeat scroll 0 0 white;
     border: 1px solid #ccc;
     border-radius: 3px;

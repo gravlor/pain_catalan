@@ -33,6 +33,7 @@
 			<input type="text" name="email" placeholder="Email"/>
 			<input type="password" name="password" placeholder="Mot de passe" />
 			<input type="text" name="adresse" placeholder="Adresse"/>
+			<input type="number" name="rayon" placeholder="Distance de recherche en KM"/>
 			<input type="radio" name="type" value="P" />Passager
 			<input type="radio" name="type" value="C" />Conducteur
 			<select name="passager">
