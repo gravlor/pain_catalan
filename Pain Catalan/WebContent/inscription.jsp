@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="icon" type="image/x-icon" href="https://d1ovtcjitiy70m.cloudfront.net/vi-1/favicon.ico">
 	<link rel='stylesheet' href='css/styles.css' type='text/css'/>
-	<title>Inscription</title>
+	<title>Inscription covoiturage | Les pains catalans]</title>
 	<jsp:include page="headers.jsp" />
 </head>
 <body>
@@ -26,12 +26,12 @@
 	</header>
 	<section>
 		(Si utilisateur non inscrit: on affiche )
-		<h2>Inscription</h2>
+		<h2>Pas encore membre ? Inscrivez-vous gratuitement</h2>
 		<form action="Inscription" method="post">
-			<p>Merci de renseigner les renseignements suivants :</p>
 			<input type="text" name="nom" placeholder="Nom"/>
 			<input type="text" name="prenom" placeholder="Prénom"/>
 			<input type="text" name="adresse" placeholder="Adresse"/>
+			<input type="text" name="email" placeholder="Email"/>
 			<input type="radio" name="type" value="P" />Passager
 			<input type="radio" name="type" value="C" />Conducteur
 			<select name="passager">
@@ -46,7 +46,7 @@
  	</section>
 	<section>
 		(Si utilisateur viens de s'inscrire: on affiche)
-		<h1>Inscription réussie !</h1>
+		<h2>Inscription réussie !</h2>
 		<p>Nom : ${nom}</p>
 		<p>Prénom :  ${prenom}</p>
 		<p>Adresse : ${adresse}</p>
