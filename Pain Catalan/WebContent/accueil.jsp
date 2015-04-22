@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="icon" type="image/x-icon" href="https://d1ovtcjitiy70m.cloudfront.net/vi-1/favicon.ico">
 <link rel='stylesheet' href='css/styles.css' type='text/css'/>
-<title>LES PAINS CATALANS - COVOITURAGE</title>
+<title>Voyagez moins cher en covoiturage</title>
 <jsp:include page="headers.jsp" />
 </head>
 <body>
 
-<div class="conteneur">
 	<header>
+<div class="conteneur">
 		<a href="accueil.jsp"><h1><span class="blabla-vert">Les</span> <span class="blabla-bleu">pains</span> <span class="blabla-rouge">catalans</span></h1></a>
 		<nav>
 			<ul>
@@ -20,6 +21,7 @@
 				<a href="profile.jsp"><li class="menu-profil"></li></a>
 			</ul>
 		</nav>
+</div>
 	</header>
 	<section>
 	<h2>Connexion</h2>
@@ -28,12 +30,9 @@
 		<label for="password">Mot de passe :</label><input type="password" name="password" />
 		<input type="submit" value="OK" />
 	</form>
-	<!-- test -->
+	<div class="lien-inscription">
+		Pas encore membre ?<br /><a href="inscription.jsp">Inscrivez-vous gratuitement </a>
+	</div>
 	</section>
-	<footer>
-			Pas encore inscrit ? Accéder au <a href="inscription.jsp">formulaire d'inscription</a>.
-	</footer>
-</div>
-
 </body>
 </html>

@@ -26,12 +26,29 @@ section{
     color: #222;
     font-size: 14px;
 }
-footer{
+.lien-inscription{
 	padding:20px;
 }
-.conteneur{
-	width:320px;
-	margin:0 auto;
+
+
+.conteneur::after, .conteneur::before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.conteneur::after {
+    clear: both;
+}
+.conteneur::after, .conteneur::before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+section, .conteneur {
+    width: 320px;
+}
+section, .conteneur {
+    margin: 0 auto;
 }
 .blabla-vert{
 	color:#6CB42F;
