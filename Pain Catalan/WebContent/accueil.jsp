@@ -26,9 +26,9 @@
 	<section>
 	<h2>Connexion</h2>
 	<form action="profile.jsp">
-		<label for="utilisateur">Utilisateur :</label><input type="text" name="utilisateur" />
-		<label for="password">Mot de passe :</label><input type="password" name="password" />
-		<input type="submit" value="OK" />
+		<input type="text" name="utilisateur" placeholder="Mon email" />
+		<input type="password" name="password" placeholder="Mon mot de passe" />
+		<input type="submit" value="Se connecter" />
 	</form>
 	<div class="lien-inscription">
 		Pas encore membre ?<br /><a href="inscription.jsp">Inscrivez-vous gratuitement </a>

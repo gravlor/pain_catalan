@@ -96,19 +96,19 @@ nav ul li a{
 	background:url("../images/picto-carte.png");
 	width:43px;
 	height:43px;
-	opacity:0.8;
+	opacity:0.6;
 }
 .menu-inscription{
 	background:url("../images/picto-inscription.png");
 	width:43px;
 	height:43px;
-	opacity:0.8;
+	opacity:0.6;
 }
 .menu-profil{
 	background:url("../images/picto-profil.png");
 	width:43px;
 	height:43px;
-	opacity:0.8;	
+	opacity:0.6;	
 }
 .menu-carte:hover{
 	opacity:1;
@@ -122,9 +122,6 @@ nav ul li a{
 form{
 	width:280px;
 	margin:0 auto;
-}
-label{
-	
 }
 input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select, textarea {
     background: none repeat scroll 0 0 white;
@@ -140,14 +137,14 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     margin: 0 auto;
     padding-left: 15px;
     width: 260px;
-    margin: 5px 0;
+    margin: 15px 0;
 }
  button, a.button, input[type="submit"] {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 #0ca9fa;
+    background-color: #0ca9fa;
     border-color: -moz-use-text-color -moz-use-text-color #048acf;
     border-image: none;
     border-radius: 3px;
@@ -163,5 +160,6 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     text-decoration: none;
 }
  button, a.button, input[type="submit"]:hover{
+ 	background-color:#0A88CC;
 	cursor:pointer;
 }
