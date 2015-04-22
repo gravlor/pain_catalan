@@ -119,6 +119,7 @@ calculate = function(){
                 		title: utilisateurs[key].name
                 	});
                 	console.log(marker);
+                	
                 	var userOption = {
                 			strokeColor: '#FF0000',
                 		    strokeOpacity: 0.8,
