@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="icon" type="image/x-icon" href="https://d1ovtcjitiy70m.cloudfront.net/vi-1/favicon.ico">
 	<link rel='stylesheet' href='css/styles.css' type='text/css'/>
-	<title>Inscription covoiturage | Les pains catalans]</title>
+	<title>Inscription covoiturage | Les pains catalans</title>
 	<jsp:include page="headers.jsp" />
 </head>
 <body>
@@ -30,8 +30,8 @@
 		<form action="Inscription" method="post">
 			<input type="text" name="nom" placeholder="Nom"/>
 			<input type="text" name="prenom" placeholder="Prénom"/>
-			<input type="text" name="adresse" placeholder="Adresse"/>
 			<input type="text" name="email" placeholder="Email"/>
+			<input type="text" name="adresse" placeholder="Adresse"/>
 			<input type="radio" name="type" value="P" />Passager
 			<input type="radio" name="type" value="C" />Conducteur
 			<select name="passager">
