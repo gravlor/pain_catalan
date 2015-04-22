@@ -26,7 +26,7 @@ public abstract class GenericDAO<T> {
    
     protected EntityManager getEntityManager() {
     	if(em==null){
-    		EntityManagerFactory emf=Persistence.createEntityManagerFactory("Projet_Java");
+    		EntityManagerFactory emf=Persistence.createEntityManagerFactory("pain_catalan");
     		em=emf.createEntityManager();
     	}
 		return em;
