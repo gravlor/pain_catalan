@@ -8,8 +8,11 @@
 <link rel='stylesheet' href='css/styles.css' type='text/css'/>
 <title>Voyagez moins cher en covoiturage | Les pains catalans</title>
 <jsp:include page="headers.jsp" />
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="paincatalan.model.User" %>
 </head>
 <body>
+<% User user = ((User) request.getSession().getAttribute("user")); %>
 	<header>
 		<div class="conteneur">
 			<nav>
@@ -17,8 +20,16 @@
 					<a href="accueil.jsp"><h1><span class="blabla-vert">Les</span> <span class="blabla-bleu">pains</span> <span class="blabla-rouge">catalans</span></h1></a>
 					<div class="conteneur-menu">
 						<a href="carte.jsp"><li class="menu-carte"></li></a>
-						<a href="inscription.jsp"><li class="menu-inscription"></li></a>
-						<a href="profile.jsp"><li class="menu-profil"></li></a>
+						<c:choose>
+      						<c:when test="${user == null}">
+      							<a href="inscription.jsp"><li class="menu-inscription"></li></a>
+      						</c:when>
+      						<c:otherwise>
+      							<a href="profile.jsp"><li class="menu-profil"></li></a>
+      						</c:otherwise>
+						</c:choose>
+						
+						
 					</div>
 				</ul>
 			</nav>
