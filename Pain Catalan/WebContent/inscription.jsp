@@ -10,20 +10,6 @@
 	<jsp:include page="headers.jsp" />
 </head>
 <body>
-	<header>
-		<div class="conteneur">
-			<nav>
-				<ul>
-					<a href="accueil.jsp"><h1><span class="blabla-vert">Les</span> <span class="blabla-bleu">pains</span> <span class="blabla-rouge">catalans</span></h1></a>
-					<div class="conteneur-menu">
-						<a href="carte.jsp"><li class="menu-carte"></li></a>
-						<a href="inscription.jsp"><li class="menu-inscription"></li></a>
-						<a href="profile.jsp"><li class="menu-profil"></li></a>
-					</div>
-				</ul>
-			</nav>
-		</div>
-	</header>
 	<section>
 		(Si utilisateur non inscrit: on affiche )
 		<h2>Pas encore membre ? Inscrivez-vous gratuitement</h2>

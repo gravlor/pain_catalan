@@ -25,7 +25,7 @@ public class UserDAO extends GenericDAO<User> {
 	
 	@SuppressWarnings("unchecked")
 	public User getUserByEmail(String email){
-		return (User) getEntityManager().createNamedQuery("Article.getUserByEmail").
+		return (User) getEntityManager().createNamedQuery("User.getUserByEmail").
 				setParameter("email", email).getSingleResult();
 	}
 	
